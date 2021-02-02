@@ -13,8 +13,8 @@ int Add(std::string numbers){
     int sum = 0;
     std::string token;
 
-    while(std::getline(ss, token, ',')){
-        sum+= std::stoi(token);
+    while(std::getline(ss, token, ',')){    
+        sum+= std::stoi(token);    //std::stoi converts a string to an integer.
     }
 
     return sum;
