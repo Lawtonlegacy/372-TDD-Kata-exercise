@@ -1,7 +1,7 @@
 #ifndef STRINGCALCULATOR_HPP
 #define STRINGCALCULATOR_HPP
-#include <string>
-#include <sstream>
+#include <string>               // std::string, std::stoi, std::getline
+#include <sstream>              // std::istringstream
 
 int Add(std::string numbers){
     std::istringstream ss(numbers);
@@ -12,7 +12,7 @@ int Add(std::string numbers){
     while(std::getline(ss, token, ',')){
         sum+= std::stoi(token);
     }
-    
+
     return sum;
 }
 
