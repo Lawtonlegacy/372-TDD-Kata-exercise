@@ -23,3 +23,10 @@ TEST_CASE("Two numbers, newline delimited, returns the sum"){
     REQUIRE( Add ("10\n30") == 40);
     REQUIRE( Add("1000\n345") == 1345);
 }
+
+TEST_CASE("Three numbers, delimited either way, returns the sum"){
+    REQUIRE( Add("1,2,3") == 6);
+    REQUIRE( Add("10\n20\n30") == 60);
+    REQUIRE( Add("15\n400, 5") == 420);
+    REQUIRE( Add("5,40\n1145") == 1190);
+}
